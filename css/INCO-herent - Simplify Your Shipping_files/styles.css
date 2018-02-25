@@ -63,14 +63,3 @@ h2 { font-size:150%; margin:15px 0 15px 0; }
   margin: 20px auto;
 }
 
-.smart-selection {font-size:200%}
-
-#subscribe-popup-div { padding:50px; border:10px solid blue; text-align:center;}
-
-#buyer-seller-choice { margin-bottom:15px; }
-#buyer-seller-choice .active { padding:5px; background-color:blue; color:white; border:2px solid blue; }
-
-
-#subscribe-popup-div input { padding:5px; color:white }
-#subscribe-popup-div input.yes { background-color:green;}
-#subscribe-popup-div input.no { background-color:red;}
