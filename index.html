@@ -75,7 +75,7 @@ To provide clear understanding of how to choose and verify appropriate use of IN
 
 <ul class="incoterms-explained">
 	<li>If you choose <span class="incoterm inco-exw">EXW</span> (Ex Works) shipping, the buyer pays all transportation costs, bears all risks, and is responsible for every step - arranging the full shipment from the supplier to the ultimate destination. The seller is only responsible for and ensuring the goods are available for pickup from the supplier at the agreed time. The ICC recommends EXW for containerized freight. However, this is not a convenient arrangement for a buyer without an agent in the export country.</li>
-	<li>If you choose <span class="incoterm inco-fob">FOB</span> (Free on Board) shipping, the seller is responsible for arranging every step to clear the goods for export from the seller’s country, up until the goods are loaded onboard the ship to leave the export country. The cost and risk are divided while the goods are onboard. The buyer assumes ownership when once the goods are onboard and arranges all other steps once the cargo leaves the export country on its way to its ultimate destination. The ICC recommends FOB for containerized freight. </li>
+	<li class="">If you choose <span class="incoterm inco-fob">FOB</span> (Free on Board) shipping, the seller is responsible for arranging every step to clear the goods for export from the seller’s country, up until the goods are loaded onboard the ship to leave the export country. The cost and risk are divided while the goods are onboard. The buyer assumes ownership when once the goods are onboard and arranges all other steps once the cargo leaves the export country on its way to its ultimate destination. The ICC recommends FOB for containerized freight. </li>
 	<li>If you choose <span class="incoterm inco-cfr">CFR</span> (Cost and Freight) shipping, the seller is liable and responsible for all costs and freight until the goods arrive at the destination point. Once the goods are loaded on the ship, the risk passes to the buyer. The buyer is responsible for clearing the goods through customs. The ICC does not recommend CFR for containerized freight – it’s designed for bulk and break bulk cargo.</li>
 	<li>If you choose <span class="incoterm inco-cif">CIF</span> (Cost, Insurance And Freight) shipping, the seller is responsible for all costs and freights until the goods arrive at the destination point and also pays insurance costs. Once the goods are loaded on the ship, the risk passes to the buyer. The buyer is responsible for clearing the goods through customs. The ICC does not recommend CIF for containerized freight – it’s designed for bulk and break bulk cargo.</li>
 	<li>If you choose <span class="incoterm inco-ddp">DDP</span>, the seller pays for all transportation costs, bears all risks, and is responsible for every step – arranging the full shipment from the supplier to the ultimate destination. The ICC recommends DDP for containerized freight. However, it’s not a convenient arrangement for sellers without an agent in the import country.</li>
@@ -92,11 +92,16 @@ To provide clear understanding of how to choose and verify appropriate use of IN
 
 	<div id="subscription-services cards" style="padding:50px; border:3px solid #999">
 
-		<div class="card"><span class="product-name">INCOtelligent</span> members enjoy unlimited access to smart incoterm contracts for $99.00 per quarter.</div>
+		<div class="card"><span class="product-name">INCOtelligent</span> members enjoy unlimited access to smart incoterm contracts for $99.00 per quarter.<div class="signup-button">Enroll</div>
+		</div>
 
-		<div class="card">Single contracts are also available for $10.00 each. <br/><br/></div>
+		<div class="card">Single contracts are also available for $10.00 each. <br/><br/>
+		<div class="signup-button">Ship Now</div>
+		</div>
 
-		<div class="card">Send inquires to support@INCO-herent.com</div>
+		<div class="card">Send inquires to support@INCO-herent.com<br>
+		<div class="signup-button">Ship Soon</div>
+		</div>
  
  		<div style="clear: both" /></div>
  	
@@ -137,12 +142,12 @@ To provide clear understanding of how to choose and verify appropriate use of IN
 <div class="section">
 <h2>About Us</h2>
 	
-	<div style="padding-bottom:20px;">INCO-herent was founded at the 2018 Cleveland, Ohio Global Legal Hackathon. </div> 
+	<div style="padding-bottom:20px;">INCO-herent was founded at the 2018 Global Legal Hackathon in Cleveland, Ohio. </div> 
 	
 	<b>Founding Members:</b>
-	<br>
+	<br><br>
 	
-	<ul style="list-style-type:none;">
+	<ul>
 		<li>5th Level Dragonborn: <b>Mara Hirz</b></li>
 		<li>Horror Cabin Survivor: <b>Jackson Biesecker</b></li>
 		<li>Human Mix-Tape: <b>Dana Beveridge</b></li>
@@ -176,9 +181,10 @@ Have questions?  We are always here to help at   <a href="mailto://mbruening@bak
 
 	for (i = 0; i < acc.length; i++) {
 		acc[i].addEventListener("click", function() {
+		
 			/* Toggle between adding and removing the "active" class,
 			to highlight the button that controls the panel */
-			this.classList.toggle("active");
+			this.classList.toggle("faq-active");
 
 			/* Toggle between hiding and showing the active panel */
 			var panel = this.nextElementSibling;
