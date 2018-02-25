@@ -1,0 +1,60 @@
+html,body,div,span,object,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;font:inherit;vertical-align:baseline}
+
+body { font-family: 'Francois One', sans-serif; font-size:14pt }
+
+ul {list-style-position: inside; }
+li { padding-left: 1px; padding-bottom: 15px; } 
+
+div.section { padding:60px 50px 90px 50px; max-width:65%; margin:40px auto; font-size:125% }
+.section p { margin-top:25px }
+
+#logo-head { padding-top:90px; margin:0 auto 60px auto; text-align:center; background-image:url('../img/shipping-container-blocks.jpg'); }
+
+.divider1,
+.divider2,
+.divider3 { height:45px; line-height:2; background-position: 0px -90px; background-image:url('../img/shipping-container-blocks.jpg'); background-repeat: repeat-x; margin:30px 0; }
+
+.divider1 { background-position: 0px 0px;}
+.divider2 { background-position: 0px -140px;}
+.divider3 { background-position: 0px -90px;}
+
+
+
+h2 { font-size:150%; margin:15px 0 15px 0; }
+
+.cards {
+	display: inline-block;
+	overflow: hidden;
+}
+
+.card {
+    width:30%; line-height:130%; float:left; padding-left:1%;
+}
+.card:hover { cursor: pointer; background-color:#FCFFD6;}
+
+.faqs { cursor:pointer; }
+.faqs:hover {text-decoration: underline } 
+
+#tagline { font-size:260%; text-align:center; width:80%; margin:10px auto 20px auto; padding:20px 30px 40px 35px;}
+#tagline span { background-color:#CECECE; padding:5px }
+
+.incoterms-explained { font-size: 80% }
+
+.product-name { background-color: #ADDFFF; padding:0 2px; } 
+
+.incoterm { padding:2px 5px; font-size:120%; color:#FFF; border:2px solid #FFF } 
+.incoterm:hover { padding:7px; border:0; cursor:pointer;}
+
+.inco-exw { background-color: #477998 } 
+.inco-ddp { background-color: #EE6C4D }
+.inco-cif { background-color: #F4BD55; letter-spacing:1.2 }
+.inco-fob { background-color: #D81E71 }
+.inco-cfr { background-color: #21C421 }
+
+/* 
+blue 477998
+orange EE6C4D
+tan E1AE68
+magenta D81E71
+lt green 21C421
+*/
