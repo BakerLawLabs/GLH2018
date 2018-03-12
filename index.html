@@ -710,8 +710,18 @@ Have questions?  We are always here to help at   <a href="mailto:INCOtelligent@g
 
 
 <div id="results_foot_msg"><hr>
-  Please enter your Ethereum Wallet Address below to save this smart contract to the blockchain:
-  <input type="text" name="buyer_eth_address">
+  <h2>Save it...</h2>
+  <div>Enter/paste your Ethereum Wallet Address below<br>- as the <b>Buyer</b> in this transaction -<br>
+  <input type="text" name="buyer_eth_address" style="width:90%;color:#222;">
+  <span style="font-size:80%">example:  0xd5d867795110c9a9420b3c35f77c3c91011b1941</span>
+  
+  <div style="padding-top:50px">Enter/paste the <b>Seller's</b> Ethereum Wallet Address below.<br>
+  <input type="text" name="buyer_eth_address" style="width:90%;color:#222;">
+  <span style="font-size:80%">example:  0xc46d8910e6d4d32e186712df9deb44c49d7179ce</span>
+  
+  <div class="clearfix" style="padding:15px"> </div>
+  <input name="submitContract" type="button" value="Create INCOtelligent Smart Contract" style="padding:5px;color:#000" onclick="window.location.reload();">
+  
 </div>
 
 
@@ -776,7 +786,7 @@ Have questions?  We are always here to help at   <a href="mailto:INCOtelligent@g
 
 	function showfinal() {
 	//alert('Your INCOtelligent smart contract has been created!');
-		document.getElementById('step3div').style.display = "block";
+		//document.getElementById('step3div').style.display = "block";
 	}
 	
 	$(document).ready(function() {
@@ -791,9 +801,10 @@ Have questions?  We are always here to help at   <a href="mailto:INCOtelligent@g
       			close: function(){
       						//Reset/hide the choices
       						$('.path-to-final').hide;
-      						$('#step3div').hide;
+      						
+      						//$('#step3div').hide;
       						//Reset/hide the result
-      						$('.results').hide;
+      						//$('.results').hide;
       						
          					//var didConfirm = confirm("Are you sure?");
          					//if(didConfirm == false){
