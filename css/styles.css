@@ -2,6 +2,8 @@ html,body,div,span,object,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addr
 
 body { font-family: 'Francois One', sans-serif; font-size:14pt }
 
+#home-inco-logo {max-width: 69% }
+
 ul { list-style-position: inside; list-style-type:none}
 li { padding-left: 1px; padding-bottom: 15px; } 
 
@@ -52,6 +54,9 @@ h2 { font-size:150%; margin:15px 0 15px 0; }
 .inco-fob { background-color: #D81E71 }
 .inco-cfr { background-color: #21C421 }
 
+
+#subscription-services { padding:50px; border:3px solid #999; }
+
 .signup-button { background-color: #666; color:#FFF; text-align:center; font-weight:normal; padding:2px 6px; margin-top:10px; }
 
 .subscribe-popup {
@@ -65,12 +70,14 @@ h2 { font-size:150%; margin:15px 0 15px 0; }
 
 .smart-selection {font-size:200%}
 
-#subscribe-popup-div { padding:50px; border:10px solid blue; text-align:center;}
-
-#buyer-seller-choice { margin-bottom:15px; }
-#buyer-seller-choice .active { padding:5px; background-color:blue; color:white; border:2px solid blue; }
+#subscribe-popup-div { padding:50px; border:5px solid #1A3ABB; text-align:center; width:98%}
 
 
 #subscribe-popup-div input { padding:5px; color:white }
 #subscribe-popup-div input.yes { background-color:green;}
 #subscribe-popup-div input.no { background-color:red;}
+
+.founders { padding-left:8%; font-size:90%; line-height:0.8 }
+#results_head_msg,
+#results_foot_msg { float:left; width:50% } 
+.schema {display:none}
