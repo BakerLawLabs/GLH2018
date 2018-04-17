@@ -41,9 +41,10 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="./testrpc/node_modules/web3/dist/web3.min.js"></script>
   </head>
 <body>
-
+2s
 <div id="logo-head">
 	<img src="img/inco-logo-large.png" id="home-inco-logo">
 </div>
@@ -223,7 +224,7 @@ Have questions?  We are always here to help at   <a href="mailto:INCOtelligent@g
 <div class="items">
 		<div class="ctrlHolder choice_item" id="flowchart_item_216" style="overflow:visible">
 			<div class="question" style="float:left;"><p>Am I prepared to bear all costs and risks from the moment the goods are available for collection at the seller’s warehouse?</p></div>
-			<div class="choice yes" style="clear:both;float:left;margin-top:85px;margin-bottom:15px;" onClick="$('#flowchart').data('flowchart').choice('216', 'yes')"><span>yes</span></div>
+			<div class="choice yes" style="clear:both;float:left;margin-top:85px;margin-bottom:15px;overflow:" onClick="$('#flowchart').data('flowchart').choice('216', 'yes')"><span>yes</span></div>
 			<div class="choice no" style="float:left;margin-top:85px;margin-bottom:15px;" onClick="$('#flowchart').data('flowchart').choice('216', 'no')"><span>no</span></div>
 			<input type="radio" name="question_216" id="question_216_yes" value="217">
 			<input type="radio" name="question_216" id="question_216_no" value="219">
@@ -719,6 +720,10 @@ Have questions?  We are always here to help at   <a href="mailto:INCOtelligent@g
   <input type="text" name="buyer_eth_address" style="width:90%;color:#222;">
   <span style="font-size:80%">example:  0xc46d8910e6d4d32e186712df9deb44c49d7179ce</span>
   
+  <div style="padding-top:50px">Enter a Unique Reference Number<br>
+  <input type="text" name="ref_no" style="width:90%;color:#222;">
+  <span style="font-size:80%">example: Use a unique PO number such as20180420-VX-PJ4 </span>
+  
   <div class="clearfix" style="padding:15px"> </div>
   <input name="submitContract" type="button" value="Create INCOtelligent Smart Contract" style="padding:5px;color:#000" onclick="window.location.reload();">
   
@@ -733,7 +738,8 @@ Have questions?  We are always here to help at   <a href="mailto:INCOtelligent@g
 
 
 
-
+<img id="loader" src="https://loading.io/spinners/ball/index.bouncing-circle-loading-icon.gif">
+<div id="resultMsg">...</div>
 
 </div> <!-- end of popup div -->
 
@@ -790,6 +796,10 @@ Have questions?  We are always here to help at   <a href="mailto:INCOtelligent@g
 	}
 	
 	$(document).ready(function() {
+	
+	//FIRST MUST clear the selections ~~~
+	
+	
 		$('.signup-button.activated').magnificPopup({ 
 			items: {
 				src:'#subscribe-popup-div',
@@ -830,7 +840,266 @@ Have questions?  We are always here to help at   <a href="mailto:INCOtelligent@g
 		
 	});
 
+// =====================================================================================
+//
+// SMART CONTRACT STUFF below
 
+        if (typeof web3 !== 'undefined') {
+            web3 = new Web3(web3.currentProvider);
+        } else {
+            // set the provider you want from Web3.providers
+            web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+        }
+
+		web3.eth.defaultAccount = web3.eth.accounts[0];	// account is currently local on mac
+		
+		var INCOtelligentContract = web3.eth.contract([
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "sellerAddress",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "buyerAddress",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "incotermChoice",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_buyerAddress",
+				"type": "address"
+			},
+			{
+				"name": "_sellerAddress",
+				"type": "address"
+			},
+			{
+				"name": "_incoterm",
+				"type": "uint8"
+			}
+		],
+		"name": "setIncoterm",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getIncoterm",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "buyer",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "seller",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "incoterm",
+				"type": "uint8"
+			}
+		],
+		"name": "IncoContract",
+		"type": "event"
+	}
+]);
+
+		var IncoContract = INCOtelligentContract.at('0xe73289f41021f31b005e120fb0a9ba42d08d1261');
+		console.log(IncoTell);
+        
+        var IncoContractEvent = INCOtelligent.IncoContract([
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "sellerAddress",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "incotermChoice",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getIncoterm",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "buyerAddress",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "buyer",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "seller",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "incoterm",
+				"type": "uint8"
+			}
+		],
+		"name": "IncoContract",
+		"type": "event"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_buyerAddress",
+				"type": "address"
+			},
+			{
+				"name": "_sellerAddress",
+				"type": "address"
+			},
+			{
+				"name": "_incoterm",
+				"type": "uint8"
+			}
+		],
+		"name": "setIncoterm",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	}
+]);
+        
+        IncoContractEvent.watch(function(error,result) {
+        	if(!error) {
+        		$("#loader").hide();
+        		console.log(result);
+        	} else {
+        		$("#loader").hide();
+        		console.log(error);
+        	}
+        });
+        
 	</script>
 
   </body>
