@@ -1,4 +1,17 @@
-        
+function saveContract() {
+	//$('#result_items').hide();
+	$('#resultMsg').show(); 
+	setTimeout( showSaveResultMsg, 5200);
+}
+
+function showSaveResultMsg() {
+    window.scrollBy(0, 460); 
+	$('#resultMsg').hide(); 
+	$('#saveResultsMsg').show();
+	$('#results_foot_msg').hide(); 
+}
+
+
 $(window).load(function () {
 
 	jQuery(".ie *:first-child").addClass("firstChild");
@@ -184,6 +197,7 @@ $.fn.flowchart = function(settings)
 		flowchart.animation = function(params)
 		{
 			//console.debug( _global_vars.content_width, width1, width2 );
+			/*
 			var width1 = _global_vars.content_width / 100 * params.bar1_width;
 			var width2 = _global_vars.content_width / 100 * params.bar2_width;
 			var width3 = _global_vars.content_width / 100 * params.bar3_width;
@@ -195,6 +209,7 @@ $.fn.flowchart = function(settings)
 			$(".graphics .bar.cost").show().animate({width: width2+'px' }, {queue:false, duration:1700, easing:'easeOutCirc'});
 			$(".graphics .bar.insurance").css({'margin-left':bar3_before_width}).show().animate({width: width3+'px' }, {queue:false, duration:1700, easing:'easeOutCirc'});
 			$(".graphics .bar.booking-freight").css({'margin-left':bar4_before_width}).show().animate({width: width4+'px' }, {queue:false, duration:1700, easing:'easeOutCirc'});
+			*/
 		}
         
         
@@ -202,6 +217,7 @@ $.fn.flowchart = function(settings)
 		{
 			flowchart.settings = $.extend({}, defaults, options);            
 		}
+		
 		$.extend(
 			flowchart,
 			{
@@ -215,6 +231,7 @@ $.fn.flowchart = function(settings)
 				}*/
 			}
 		);
+		
 		initialise(options);
 
     }

@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>INCO-herent - Simplify Your Shipping with Smart Contracts for Incoterms</title>
+    <title>INCO-herent - Simplify Your Shipping with Incotelligent Smart Contracts for Incoterms</title>
     <meta name="description" content="Create shipping Incoterms smart contracts on the Ethereum blockchain">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--[if IE]>
@@ -25,6 +25,8 @@
 	<link rel="stylesheet" href="css/magnific-popup.css">
 
     <script>
+    //Set page variables
+    
     var _global_vars = {
         content_width: 960,
         browser_type: '',
@@ -44,7 +46,6 @@
     <script src="./testrpc/node_modules/web3/dist/web3.min.js"></script>
   </head>
 <body>
-2s
 <div id="logo-head">
 	<img src="img/inco-logo-large.png" id="home-inco-logo">
 </div>
@@ -109,23 +110,22 @@ To provide clear understanding of how to choose and verify appropriate use of IN
 <h2>Subscription Services</h2>
 
 	<div id="subscription-services" class="cards">
-
-		<div class="card">Members enjoy unlimited access to <span class="product-name">INCOtelligent</span> smart contracts for $99.00 per quarter.<div class="signup-button activated">Enroll</div>
+		<div class="card activated">
+			Members enjoy unlimited access to <span class="product-name">INCOtelligent</span> smart contracts for $99.00 per quarter.
+			<div class="signup-button activated">Enroll</div>
 		</div>
-
-		<div class="card">Single contracts are also available for $10.00 each. <br/><br/>
-		<div class="signup-button activated">Ship Now</div>
+		<div class="card activated" style="margin-left:17%"><br>Single contracts are available for $10.00 each. <br/><br/>
+			<div class="signup-button activated">Ship Now</div>
 		</div>
-
-		<div class="card">Send inquires to <a href="mailto:INCOtelligent@gmail.com">INCOtelligent@gmail.com</a><br>
-		<div class="signup-button">Ship Soon</div>
-		</div>
- 
- 		<div style="clear: both" /></div>
- 	
- 	</div>
-
+	</div>
+	
+<div style="clear: both;width:48%;margin:5px auto;text-align:center;" />
+		<div style="font-size:smaller;">
+		    Send inquires to <a href="mailto:INCOtelligent@gmail.com">INCOtelligent@gmail.com</a></br>
+		</div> 		
 </div>
+
+</div> <!-- end section -->
 
 
 <div class="divider1">&nbsp;</div>
@@ -174,7 +174,7 @@ To provide clear understanding of how to choose and verify appropriate use of IN
 
 <div class="section">
 <h2>Help/Contact</h2>
-Have questions?  We are always here to help at   <a href="mailto:INCOtelligent@gmail.com">INCOtelligent@gmail.com</a>
+Have questions?  We are always here to help at <a href="mailto:INCOtelligent@gmail.com">INCOtelligent@gmail.com</a>
 </div>
 
 
@@ -195,6 +195,7 @@ Have questions?  We are always here to help at   <a href="mailto:INCOtelligent@g
 <div id="subscribe-popup-div" class="subscribe-popup mfp-hide">
   
   <h1 style="font-size:130%;padding:20px"><span class="product-name">INCOtelligent</span> smart contract selector</h1>
+  <br><br>
 
 
 <!-- 
@@ -222,12 +223,13 @@ Have questions?  We are always here to help at   <a href="mailto:INCOtelligent@g
 <!--  ############### QUESTION_ITEMS : START ###############  -->
 
 <div class="items">
-		<div class="ctrlHolder choice_item" id="flowchart_item_216" style="overflow:visible">
-			<div class="question" style="float:left;"><p>Am I prepared to bear all costs and risks from the moment the goods are available for collection at the seller’s warehouse?</p></div>
-			<div class="choice yes" style="clear:both;float:left;margin-top:85px;margin-bottom:15px;overflow:" onClick="$('#flowchart').data('flowchart').choice('216', 'yes')"><span>yes</span></div>
-			<div class="choice no" style="float:left;margin-top:85px;margin-bottom:15px;" onClick="$('#flowchart').data('flowchart').choice('216', 'no')"><span>no</span></div>
+		<div class="ctrlHolder1 choice_item" id="flowchart_item_216">
+			<div class="question"><p>Am I prepared to bear all costs and risks from the moment the goods are available for collection at the seller’s warehouse?</p></div>
+			<div class="choice yes" onClick="$('#flowchart').data('flowchart').choice('216', 'yes')"><span>yes</span></div>
+			<div class="choice no" onClick="$('#flowchart').data('flowchart').choice('216', 'no')"><span>no</span></div>
 			<input type="radio" name="question_216" id="question_216_yes" value="217">
 			<input type="radio" name="question_216" id="question_216_no" value="219">
+			<div style="clear:both"></div>
 		</div>
 		<div class="ctrlHolder choice_item" id="flowchart_item_217">
 			<div class="question"><p>Am I capable to load the goods at the seller’s warehouse?</p></div>
@@ -375,7 +377,7 @@ Have questions?  We are always here to help at   <a href="mailto:INCOtelligent@g
 <!--  ############### RESULTS_ITEMS : START ############### -->
 
 		<div class="result_item" id="flowchart_result_232">
-		<h1>DDP</h1>
+<h1>DDP</h1>
 <p class="precision">... named place of destination</p>
 <p class="abbreviation">Delivered Duty Paid</p>
 <img class="schema" src="../assets/img/schema/en/DDP.png">
@@ -709,37 +711,54 @@ Have questions?  We are always here to help at   <a href="mailto:INCOtelligent@g
 <!--  ############################################################## RESULTS_ITEMS : END ############################################################## -->
 </div><!-- end of #result_items -->
 
-
 <div id="results_foot_msg"><hr>
   <h2>Save it...</h2>
-  <div>Enter/paste your Ethereum Wallet Address below<br>- as the <b>Buyer</b> in this transaction -<br>
+  <div>Enter/paste your Ethereum Address below<br>- as the <b>Buyer</b> in this transaction -<br>
   <input type="text" name="buyer_eth_address" style="width:90%;color:#222;">
-  <span style="font-size:80%">example:  0xd5d867795110c9a9420b3c35f77c3c91011b1941</span>
+  <span class="exampletext">example:  0xd5d867795110c9a9420b3c35f77c3c91011b1941</span>
   
-  <div style="padding-top:50px">Enter/paste the <b>Seller's</b> Ethereum Wallet Address below.<br>
+  <div style="padding-top:50px">Enter/paste the <b>Seller's</b> Ethereum Address below.<br>
   <input type="text" name="buyer_eth_address" style="width:90%;color:#222;">
-  <span style="font-size:80%">example:  0xc46d8910e6d4d32e186712df9deb44c49d7179ce</span>
+  <span class="exampletext">example:  0xc46d8910e6d4d32e186712df9deb44c49d7179ce</span>
   
-  <div style="padding-top:50px">Enter a Unique Reference Number<br>
+  <div style="padding-top:50px">Enter a Unique Reference Number for this contract<br>
   <input type="text" name="ref_no" style="width:90%;color:#222;">
-  <span style="font-size:80%">example: Use a unique PO number such as20180420-VX-PJ4 </span>
+  <span class="exampletext">example: Use a unique PO number</span>
   
   <div class="clearfix" style="padding:15px"> </div>
-  <input name="submitContract" type="button" value="Create INCOtelligent Smart Contract" style="padding:5px;color:#000" onclick="window.location.reload();">
   
+  <input name="submitContract" id="btnSubmitContract" type="button" 
+  		value="Create INCOtelligent Smart Contract" 
+  		style="padding:25px;color:#000;background-color:#ADDFFF;" 
+  		onclick="saveContract();">
+
 </div>
 
 
 </div><!-- end of .content -->
 </div>
 </section><!-- end of .result -->
+
 <div id="error"></div>
 </div>
 
 
 
-<img id="loader" src="https://loading.io/spinners/ball/index.bouncing-circle-loading-icon.gif">
-<div id="resultMsg">...</div>
+
+<div id="resultMsg" style="clear:both">
+Storing contract to the blockchain...<br>
+<img id="loader" src="./img/rotating-squares-preloader-gif.gif" style="padding:30px">
+</div>
+
+
+<div id="saveResultsMsg">
+Your contract was stored with transaction id:<br>
+<span id="txTextResult">0xe5ad2d1ddd83ace9ac20fbe57c720ae657d909b96f24926c2d7dc5dd74793fb7</span>
+<br><br>
+<a href="https://etherscan.io/tx/0xe5ad2d1ddd83ace9ac20fbe57c720ae657d909b96f24926c2d7dc5dd74793fb7" target="_blank">View on Etherscan.io</a>
+
+
+</div>
 
 </div> <!-- end of popup div -->
 
@@ -750,7 +769,19 @@ Have questions?  We are always here to help at   <a href="mailto:INCOtelligent@g
 <!-- BELOW FOOTER LOADS JS scripts etc.. -->       
 
 
-
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD7YTC6FZhSDYu0z-YcEytTAZFXTV8dCrc",
+    authDomain: "incotelligent-smart-contracts.firebaseapp.com",
+    databaseURL: "https://incotelligent-smart-contracts.firebaseio.com",
+    projectId: "incotelligent-smart-contracts",
+    storageBucket: "incotelligent-smart-contracts.appspot.com",
+    messagingSenderId: "500023586374"
+  };
+  firebase.initializeApp(config);
+</script>
 
 
 	<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
@@ -791,16 +822,16 @@ Have questions?  We are always here to help at   <a href="mailto:INCOtelligent@g
 	}
 
 	function showfinal() {
-	//alert('Your INCOtelligent smart contract has been created!');
+	alert('Your INCOtelligent smart contract has been created!');
 		//document.getElementById('step3div').style.display = "block";
 	}
 	
 	$(document).ready(function() {
 	
-	//FIRST MUST clear the selections ~~~
+	//FIRST should reset the selections, or do it on close ~~~
+	//$('#flowchart').flowchart({type_person:_global_vars.type_person});
 	
-	
-		$('.signup-button.activated').magnificPopup({ 
+		$('.card.activated').magnificPopup({ 
 			items: {
 				src:'#subscribe-popup-div',
 				type:'inline'
@@ -811,6 +842,7 @@ Have questions?  We are always here to help at   <a href="mailto:INCOtelligent@g
       			close: function(){
       						//Reset/hide the choices
       						$('.path-to-final').hide;
+      						
       						
       						//$('#step3div').hide;
       						//Reset/hide the result

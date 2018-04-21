@@ -27,11 +27,12 @@ h2 { font-size:150%; margin:15px 0 15px 0; }
 .cards {
 	display: inline-block;
 	overflow: hidden;
-	margin:auto 10px; border:4px solid green;
+	margin:auto 10px; 
+	/*border:4px solid blue; */
 }
 
 .card {
-    width:30%; line-height:130%; float:left; padding:5px 5px 5px 10px;
+    width:40%; line-height:130%; float:left; padding:5px 5px 5px 5px; text-align:center;
 }
 .card:hover { cursor: pointer; background-color:#FCFFD6;}
 
@@ -81,3 +82,13 @@ h2 { font-size:150%; margin:15px 0 15px 0; }
 #results_head_msg,
 #results_foot_msg { float:left; width:50% } 
 .schema {display:none}
+
+#NOTloader { display:none; width:100px;}
+#resultMsg { width:80%; margin:10px auto; padding:25px 25px 50px 25px; display:none; }
+#saveResultsMsg {display:none}
+
+.exampletext { font-size:80%; color:#999; wont-weight:normal }
+
+.precision {display:none}
+
+#txTextResult {font-weight:normal;font-size:70%}
