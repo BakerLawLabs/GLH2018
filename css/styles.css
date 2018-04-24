@@ -85,7 +85,7 @@ h2 { font-size:150%; margin:15px 0 15px 0; }
 
 #NOTloader { display:none; width:100px;}
 #resultMsg { width:80%; margin:10px auto; padding:25px 25px 50px 25px; display:none; }
-#saveResultsMsg {display:none}
+#saveResultsMsg { display:none }
 
 .exampletext { font-size:80%; color:#999; wont-weight:normal }
 
